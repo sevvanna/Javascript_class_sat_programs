@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="text" id="demo">
+<input type="button" onclick="myfunction()" value="Submit">
+<p id="p1"></p>
+<script>
+function myfunction()
+{
+alert("HI");
+const message= document.getElementById("p1");
+message.innerHTML="";
+let amt = document.getElementById("demo");
+try
+{
+  if(isNaN(amt)) throw "not a number";
+if(amt <5000)throw "low balance amount cannot be withdrawn";
+}
+
+catch(err)
+{
+message.innerHTML="ERROR"+err;
+
+    
+}
+}
+</script>
+
+</body>
+
+</html>
